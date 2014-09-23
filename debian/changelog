@@ -1,3 +1,10 @@
+nfs-ganesha (2.2.0dev1) UNRELEASED; urgency=low
+
+  * drop the - from the debian changelog to meet the debian policy for native
+  * add in the debug package as part of the build
+
+ -- Charles Hardin <ckhardin@gmail.com>  Wed, 24 Sep 2014 17:56:14 +0000
+
 nfs-ganesha (2.1.0-1) stable; urgency=log
 
   * Updates for the debian packaging using the cmake build system
