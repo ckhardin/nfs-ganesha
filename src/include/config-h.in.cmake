@@ -50,6 +50,9 @@
 #cmakedefine HAVE_DAEMON 1
 #cmakedefine USE_LTTNG 1
 
+/* Handle some of the 64-bit offset changes when settable */
+#cmakedefine _FILE_OFFSET_BITS @_FILE_OFFSET_BITS@
+
 #define NFS_GANESHA 1
 
 #endif /* CONFIG_H */
