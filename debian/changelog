@@ -10,7 +10,7 @@ nfs-ganesha (1.5.0-1) stable; urgency=low
   * Cache inode has been reworked on its handling of directory entries
   * Cache inode readdir logic is now based on callbacks to take advantage of AVL tree work
   * State Management has been unified and improved. Locking is consistent across both NFSv3 and NFSv4.x
-  * Client id management support has been added	
+  * Client id management support has been added
   * 9p.2000L support has been added. Dev is currently under alpha version
   * Improved file handle support. Handles's versions and variable length handles are better supported.
   * Memory allocation has been refactored. TC-Malloc or Jemalloc can be use with a fallback to libC's malloc/free
@@ -21,10 +21,10 @@ nfs-ganesha (1.5.0-1) stable; urgency=low
 
 nfs-ganesha (1.4.0-1) stable; urgency=low
   * Bug Fix: Memory leak fixed in RPC's DRC
-  * Bug Fix: Bad computation of rbt_value in RPC's DRC's hashtable 
+  * Bug Fix: Bad computation of rbt_value in RPC's DRC's hashtable
   * New FSAL_CEPH (dedicated to the ceph filesystem)
   * pNFS code refurbished with CEPH specific code and layout file support
-  * All RPCs are now based on TIRPC	
+  * All RPCs are now based on TIRPC
   * Bug Fix: in nfs_Write, for clean handle of umask, the server should allow the owner of a file to write to it, even if the file is read-only
   * Bug Fix: bad memory padding in fsal_handle_t and fsal_cookie_t
 
@@ -33,7 +33,7 @@ nfs-ganesha (1.4.0-1) stable; urgency=low
 nfs-ganesha (1.3.0-1) stable; urgency=low
   * Lustre FSAL: exporting several Lustre filesystem with the same server
   * A bug was found and fix in OP4_READDIRPLUS (produced missing entries)
-  * Directory content cached is now managed as a tree. 
+  * Directory content cached is now managed as a tree.
   *  Lock support for FSAL_LUSTRE
   * Lustre FSAL: regression in readdir detected and fixed
   * FSAL_LUSTRE/FSAL_XFS/FSAL_FUSELIKE/FSAL_ZFS: regression in readdir detected
@@ -92,7 +92,7 @@ nfs-ganesha (1.0.5-1) stable; urgency=low
   * pNFS related sources were reorganized with a design closer to what is done with FSAL/MFSL
   * "stable_how" flag management has been remade in deep, including a new FSAL_sync call to every FSAL
   * FSAL_PROXY: the FSAL is no able to deal correctly when the remote server restarts
-  * Data Cache : a set of flushers threads has been added to the daemon, making it possible to run the flush operations internally 
+  * Data Cache : a set of flushers threads has been added to the daemon, making it possible to run the flush operations internally
   * Bug Fix: FSAL error was not converted into a Cache_inode error, and thus was  dropped, causing client to infinite retry
   * Add a new tool to find all the instances of LogXXX
   * New LogInfo and LogWarn log level
@@ -118,7 +118,7 @@ nfs-ganesha (1.0.3-1) stable; urgency=low
   * security fixed : when 'root' is mapped as nobody, its 'altgroups' is cleared
   * Configuration can now reduce the version of NFS advertsised to rpcbind (to avoid NFSv2 for example).
   * XML output has been added to non-regression tests for easier integration in HudsonCI
-  * A few changes in NLM implementation 
+  * A few changes in NLM implementation
   * FSAL_HPSS has been ported to HPSSv7.3.2
   * Better management of NFSv4.x attribute FATTR4_CHANGE
 
@@ -294,7 +294,7 @@ nfs-ganesha (0.99.54-1) stable; urgency=low
 
 nfs-ganesha (0.99.53-1) stable; urgency=low
 
-  * Bug Fix in the non-regression test suite 
+  * Bug Fix in the non-regression test suite
   * Many bug fixed in MFSL_ASYNC (tested with FSAL_PROXY)
   * FSAL_POSIX uses pread/pwrite instead of fseek+fwrite/fseek+fread
   * NFSv4 implementation now supports NFSv4 referrals
@@ -303,7 +303,7 @@ nfs-ganesha (0.99.53-1) stable; urgency=low
 
 nfs-ganesha (0.99.52-1) stable; urgency=low
 
-  * Bug Fix: possible race condition in cache_inode_readdir 
+  * Bug Fix: possible race condition in cache_inode_readdir
   * MFSL_ASYNC: now, preallocated entries are owned by each worker
   * Bug Fix: bad MFSL_Context management in ganeshell
   * Bug Fixi (MFSL): deleted entry can no more be looked up
